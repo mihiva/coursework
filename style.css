@@ -1,0 +1,54 @@
+body {
+  background: url('bordor.jpg') no-repeat; 
+  background-size: cover;
+  font-size: 1.5em;
+}
+
+h1 {  
+    color: black;
+    font-size: 1em;
+}
+
+ul {
+    color: black;
+    list-style-position: inside;
+}
+
+li a {
+    color: blue;
+}
+
+a {
+    color: blue;
+    text-decoration: underline; 
+} 
+
+a:hover {
+    color: gray;
+}
+
+label {
+    color: black;
+}
+
+.col {
+    color: black;
+}
+
+.demo-placeholder {
+    width: 60%;
+    height: 60%;
+    font-size: 10px;
+    line-height: 1.5em;
+    margin: 0px;
+    background-color: white;
+}
+
+#placeholder {
+    width: 600px;
+}
+.legend {
+    margin: 0px;
+    background-color: white;
+    width: 600px;   
+}
