@@ -7,4 +7,4 @@ from django.conf.urls.static import static
 urlpatterns = patterns('',
                        url(r'^question/', include('question.urls')),
                        url(r'^admin/', include(admin.site.urls)),
-) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+                       ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
