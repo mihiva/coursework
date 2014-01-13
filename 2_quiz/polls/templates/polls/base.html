@@ -1,0 +1,30 @@
+<html>
+ <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>{% block title %}{% endblock %}
+  </title>
+{% load staticfiles %}
+  <link href="{% static 'css/basic.css' %}" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="{% static 'EnhanceJS/enhance.js' %}"></script>	
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+  <script type="text/javascript">
+		// Run capabilities test
+		enhance({
+			loadScripts: [
+				{src: "{% static 'js/excanvas.js' %}", iecondition: 'all'},
+				"{% static 'jquery.min.js' %}",
+				"{% static 'js/visualize.jQuery.js' %}",
+				"{% static 'js/example.js' %}"
+			],
+			loadStyles: [
+				"{% static 'css/visualize.css' %}",
+				"{% static 'css/visualize-dark.css' %}"
+			]	
+		});   
+  </script>
+ </head>
+ <body>
+<a href="{% url 'polls:detail' poll.id %}"><<Голосовать ещё</a>
+{% block content %}
+{% endblock %}
+ </body>
+</html>

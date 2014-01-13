@@ -1,0 +1,20 @@
+{% extends "polls/base.html" %}
+{% block title %}Результаты опроса{% endblock %}
+{% block content %}
+<table id="secret">
+	<caption>{{ poll.question }}</caption>
+	<thead>
+	<tr><td></td>
+			<th scope="col"></th></tr>
+	</thead>
+
+	<tbody>
+		{% for choice in poll.choice_set.all %}
+		<tr>
+			<th scope="row">{{ choice.choice_text }}</th>
+			<td>{{ choice.votes }}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% endblock %}
